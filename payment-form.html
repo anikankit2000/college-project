@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+        }
+
+        h1{
+           color: violet; 
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>Payment Form</h1>
+        <p>Required Field are followed by *</p>
+        <h1>Contact Information</h1>
+        <p>Name: * <input type="text" name="name" required></p>
+        <fieldset>
+            <legend><b>Gender * </b></legend>
+            <p>
+                Male <input type="radio" name="gender" id="male" required>
+                Female <input type="radio" name="gender" id="female" required>
+            </p>
+        </fieldset>
+        <p>
+            Address: <textarea name="address" id="address" cols="50" rows="5"></textarea>
+        </p>
+        <p>
+            Email: * <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            Pin Code: * <input type="text" name="pincode" id="pincode" pattern="\d{6}" maxlength="6" minlength="6"
+                placeholder="Enter 6 digit Pin Code" required>
+
+        </p>
+        <h2>
+            Payment Information
+        </h2>
+        <p>
+            Card Type: *
+            <select name="card_type" id="card_type" required>
+                <option value="">---Select a Card Type---</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">RuPay</option>
+                <option value="mastercard">MasterCard</option>
+            </select>
+        </p>
+        <p>
+            Card Number: * <input type="text" id="card_number" name="card_number" pattern="\d{16}" maxlength="16"
+                minlength="16" placeholder="Enter 16 digit card number" required>
+        </p>
+        <p>
+            Expiration Date: * <input type="month" name="expi_date" id="expi_date" required>
+        </p>
+        <p>
+            CVV: * <input type="password" id="cvv" name="cvv" pattern="\d{3}" maxlength="3"
+                placeholder="3 digit CVV Number" required>
+        </p>
+        <input type="submit" value="Pay Now">
+    </form>
+</body>
+
+</html>
